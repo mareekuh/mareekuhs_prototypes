@@ -1,0 +1,14 @@
+/* Look-and-feel rules: how the theme values in theme.css are applied. Colours are read directly
+   from the --lf-* values wherever they appear; the rules below cover structure and type. */
+.scr,.app{background:var(--lf-root,#042936) !important}
+.sec,.section{border-radius:var(--lf-section-radius,16px) !important;border-bottom:1px solid var(--lf-section-rule,transparent)}
+.t-h,.h20{font-family:var(--lf-headline-font) !important;font-weight:var(--lf-headline-weight,700) !important;font-size:var(--lf-headline-size,20px) !important;line-height:var(--lf-headline-lh,30px) !important}
+.t-sumh,.t-sumh p,.sum-h{font-size:var(--lf-sum-size,32px) !important;line-height:var(--lf-sum-lh,40px) !important}
+.t-panel,.panel{transform:scale(var(--lf-panel-scale,1));border-radius:var(--lf-panel-radius,0px) !important;overflow:hidden}
+.t-bloom,.bloom{display:var(--lf-bloom,block) !important}
+.bstripe,.sum-bar{background:var(--lf-stripe) !important}
+.bstripe{width:var(--lf-stripe-w,500px) !important;height:var(--lf-stripe-h,16px) !important;transform:var(--lf-stripe-transform,none) !important}
+/* hand-built screens: the floating right panel hangs from the top edge so its colour strip lines up with the page strip */
+.app>.panel{transform-origin:50% 0}
+/* converted screens: the floating panel hangs from the top edge too, so no gap shows above its colour strip */
+.t-panel{transform-origin:50% 0}

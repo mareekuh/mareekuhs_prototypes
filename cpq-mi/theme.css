@@ -1,0 +1,44 @@
+/* Look and feel: "Navy" (26D/27A Engagement Run update). Every value the prototype reads is listed here. */
+:root{
+  /* surfaces */
+  --lf-root:linear-gradient(180deg,#29476d 21.35%,#1a2e47 89.225%);
+  --lf-page:transparent;
+  --lf-page2:transparent;
+  --lf-header:#29476d;
+  --lf-preview-frame:#0f1c2d;
+  --lf-nav:#111e2e;
+  --lf-section:transparent;
+  --lf-section2:transparent;
+  --lf-section-hover:rgba(255,255,255,.04);
+  --lf-card:rgba(255,255,255,.06);
+  --lf-panel:#16273d;
+  --lf-input:rgba(15,24,39,.9);
+  --lf-ao:#2a4263;
+  --lf-ao-stroke:#40ede6;
+  /* text and status */
+  --lf-link:#f0cc72;
+  --lf-info:#247f9f;
+  --lf-info-soft:#5da1b9;
+  --lf-success:#518324;
+  --lf-success-soft:#6ea73a;
+  --lf-warning:#eca452;
+  --lf-danger:#d73e29;
+  /* shape and structure */
+  --lf-section-radius:16px;
+  --lf-section-rule:rgba(255,255,255,.12);
+  --lf-panel-scale:.95;
+  --lf-panel-radius:20px;
+  --lf-bloom:none;
+  /* type */
+  --lf-headline-font:Georgia,serif;
+  --lf-headline-weight:400;
+  --lf-headline-size:24px;
+  --lf-headline-lh:32px;
+  --lf-sum-size:40px;
+  --lf-sum-lh:52px;
+  /* AI summary stripe */
+  --lf-stripe:linear-gradient(180deg,#f0745c 0%,#e9a25a 45%,#35c2b2 100%);
+  --lf-stripe-w:4px;
+  --lf-stripe-h:500px;
+  --lf-stripe-transform:none;
+}

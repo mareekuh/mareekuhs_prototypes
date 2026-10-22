@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Quote detail</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/engage/components/bundle.css">
+<script src="ds/engage/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}</style>
+</helmet>
+<div class="eg-app" style="width: 1920px; height: 1080px">
+<x-import component-from-global-scope="Engage.NavRail" active="opportunities" home-href="Main.dc.html"></x-import>
+<main class="eg-main">
+<div class="eg-strip"></div>
+<x-import component-from-global-scope="Engage.RecordHeader" crumb="Opportunity" crumb-href="Opportunity.dc.html" title="Infrastructure Services - OPTY-00005" status="Quote in progress" status-tone="info" meta="{{ v20 }}"></x-import><div class="eg-scroll">
+<x-import component-from-global-scope="Engage.PageSummary" title="Quote created based on customer request" sources="{{ v1 }}" points="{{ v2 }}"></x-import>
+<div class="eg-content">
+<x-import component-from-global-scope="Engage.Section" overline="Included products" title="Products centralizes efficiency with localized flexibility" description="Provides the strongest balance between reliability, deployment flexibility, and infrastructure adaptability across diverse site conditions and evolving operational requirements." action="expand" action-href="ProductList.dc.html" action-label="Open product list" sources="{{ v5 }}" chips="{{ v6 }}">
+<p class="eg-totals">Total: <b>$697,400.00</b> Customer’s budget: <b>$800,000.00</b> Number of items: <b>8 of 157</b></p>
+<x-import component-from-global-scope="Engage.DataTable" columns="{{ v3 }}" rows="{{ v4 }}"></x-import>
+</x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Requirements" title="Customer is looking to support AC Powered infrastructure expansion" description="The customer needs to support AC-fed equipment within existing -48V DC and 380V DC infrastructure while minimizing redesign. The solution must meet deployment constraints and deliver reliable power across diverse site conditions." sources="{{ v7 }}" chips="{{ v8 }}"></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Deal economics" title="Highest value, with lowest cost" description="The main advantage of the hybrid approach is that it provides a mixed vendor allowing the customer to gain the best price for a more sustainable and scalable solution." sources="{{ v10 }}" chips="{{ v11 }}"><x-import component-from-global-scope="Engage.MetricTable" rows="{{ v9 }}"></x-import></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Documents" title="This is the information shared with you and Supremo" sources="{{ v13 }}" chips="{{ v14 }}"><div><x-import component-from-global-scope="Engage.FileRow" name="Northern Grid-RFP.pdf" description="Initial requirements for the new infrastructure" date="01/25/2026" last="{{ v12 }}"></x-import></div></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Collaborators" title="Team working on this solution" sources="{{ v18 }}" chips="{{ v19 }}"><div><x-import component-from-global-scope="Engage.PersonRow" name="Adrian Cole" role="Procurement Manager" note="Viewed initial outreach email on AC Expansion" photo="assets/b7ebfd0cc46b9996068c15d63ea8098d.png" tag="key decision maker" verified="{{ v15 }}" linkedin="{{ v16 }}"></x-import><x-import component-from-global-scope="Engage.PersonRow" name="Jennifer Bennet" role="Quoting Agent" photo="img/0553c.png" last="{{ v17 }}"></x-import></div></x-import>
+</div>
+</div>
+</main>
+<x-import component-from-global-scope="Engage.RightPanel">
+<x-import component-from-global-scope="Engage.PanelHeading">Priority actions (0)</x-import>
+
+<x-import component-from-global-scope="Engage.PanelHeading">Communications</x-import>
+<div class="eg-stack" style="padding: 0 24px 24px"><x-import component-from-global-scope="Engage.CommItem" icon="pdf" tone="stone" over="Proposal PDF" title="Generate proposal for Northern Grid" text="Recommended offers and pricing information are ready to share with customer."></x-import></div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = {"v1": [{"label": "Source 1"}, {"label": "Source 2"}], "v2": ["Products have been selected based on the agreed approach.", "Review the recommendations to confirm they align with the customer’s needs before sharing."], "v3": [{"key": "product", "label": "Product", "width": "30%", "link": true}, {"key": "why", "label": "Why it’s included"}, {"key": "qty", "label": "Quantity", "width": "110px", "numeric": true}], "v4": [{"product": "Vertiv central inverter backbone", "why": "Supports the customer’s high pod-level power demands", "qty": 23, "href": "ProductDetail.dc.html"}, {"product": "CE+T rack-mounted support modules", "why": "Distributes power conversion closer to the rack to improve rollout flexibility and simplify deployment across evolving site conditions.", "qty": 6}, {"product": "Adaptable DC input / power interface", "why": "Helps the customer maintain operational continuity and simplify maintenance.", "qty": 1}, {"product": "Coordinated AC distribution / bypass assembly", "why": "Reduces needs for major infrastructure redesign across sites", "qty": 10}, {"product": "Modular UPS systems", "why": "Enhances energy efficiency by minimizing power loss during distribution.", "qty": 15}, {"product": "High-efficiency cooling solutions", "why": "Facilitates scalable solutions that can grow with the customer’s needs.", "qty": 8}, {"product": "Integrated battery management system", "why": "Provides real-time monitoring to optimize power usage and performance.", "qty": 5}, {"product": "Remote monitoring and management tools", "why": "Enables rapid troubleshooting and reduces downtime through advanced diagnostics.", "qty": 5}], "v5": [{"label": "Product catalog"}], "v6": [{"label": "Recommend alternatives"}, {"label": "View all products", "href": "ProductList.dc.html"}], "v7": [{"label": "Sales engagement app"}, {"label": "Traceability"}], "v8": [{"label": "Edit requirements", "href": "EditLoading.dc.html"}], "v9": [{"label": "List value", "value": "$697,400"}, {"label": "Product discount", "value": "5%"}, {"label": "Net value", "value": "$662,530"}, {"label": "Installation charges", "value": "$30,000"}, {"label": "Billing cadence", "value": "one-time"}, {"label": "TCV", "value": "$692,530", "strong": true}], "v10": [{"label": "Sales engagement"}, {"label": "Traceability"}], "v11": [{"label": "View pricing alternatives", "href": "DiscountLoading.dc.html"}], "v12": true, "v13": [{"label": "Source 1"}, {"label": "Source 2"}], "v14": [{"label": "Upload document"}, {"label": "Browse knowledge center"}], "v15": true, "v16": true, "v17": true, "v18": [{"label": "Sales engagement app"}], "v19": [{"label": "Edit collaborators"}], "v20": [{"label": "Account", "value": "Northern Grid"}, {"label": "Budget", "value": "USD 800,000"}, {"label": "Close date", "value": "11/24/26"}]};
+    return Object.assign(v, this.handlers ? this.handlers() : {});
+  }
+}
+</script>
+</body>
+</html>

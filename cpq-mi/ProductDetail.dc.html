@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Product detail</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/engage/components/bundle.css">
+<script src="ds/engage/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}</style>
+</helmet>
+<div class="eg-app" style="width: 1920px; height: 1080px">
+<x-import component-from-global-scope="Engage.NavRail" active="opportunities" home-href="Main.dc.html"></x-import>
+<main class="eg-main">
+<div class="eg-strip"></div>
+<x-import component-from-global-scope="Engage.RecordHeader" crumb="Quote detail" crumb-href="QuoteDetail.dc.html" title="Vertiv central inverter backbone" meta="{{ v1 }}"></x-import><div class="eg-scroll eg-drill">
+<x-import component-from-global-scope="Engage.PageSummary" title="Supports the customer’s high pod-level power demands" sources="{{ v2 }}" text="Vertiv Central Inverter Backbone is a critical power infrastructure product intended for centralized power continuity use cases. It may be relevant for facilities that need resilient, centralized inverter-backed power as part of a larger electrical architecture."></x-import>
+<div class="eg-content">
+<x-import component-from-global-scope="Engage.Section" overline="Product overview" title="High compatibility with 480V AC input and indoor electrical-room installation" description="The Vertiv central inverter and IT backbone ecosystem provides modular power, cooling, and infrastructure. Its core solutions range from data center facility power modules to telecommunication DC-to-AC conversion." sources="{{ v3 }}" chips="{{ v4 }}" loading-ms="{{ v5 }}"><p class="eg-muted">By consolidating power conversion into a shared infrastructure, it supports high-capacity deployments with improved serviceability and operational consistency.</p><div class="eg-tiles"><x-import component-from-global-scope="Engage.ImageTile" src="img/cc63a.png" label="Inverter modules"></x-import><x-import component-from-global-scope="Engage.ImageTile" src="img/b50dc.png" label="Power distribution unit (PDU)"></x-import><x-import component-from-global-scope="Engage.ImageTile" src="img/4e453.png" label="Controller &amp; monitoring system"></x-import><x-import component-from-global-scope="Engage.ImageTile" src="img/3cd1c.png" label="Cooling system" fit="cover"></x-import></div></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Product specification" sources="{{ v8 }}" chips="{{ v9 }}" loading-ms="{{ v10 }}"><x-import component-from-global-scope="Engage.DataTable" columns="{{ v6 }}" rows="{{ v7 }}"></x-import></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Resources" title="You are up to date on the newest patches" chips="{{ v12 }}" loading-ms="{{ v13 }}"><div><x-import component-from-global-scope="Engage.FileRow" name="Technical spec" description="Version 2.1" date="21 Jun 2026"></x-import><x-import component-from-global-scope="Engage.FileRow" name="Installation Guide - Vertiv central inverter backbone" description="English" date="21 Jun 2026" last="{{ v11 }}"></x-import></div></x-import>
+</div>
+</div>
+</main>
+<x-import component-from-global-scope="Engage.RightPanel">
+<x-import component-from-global-scope="Engage.PanelHeading">Priority actions (0)</x-import>
+
+<x-import component-from-global-scope="Engage.PanelHeading">Communications</x-import>
+<div class="eg-stack" style="padding: 0 24px 24px"><x-import component-from-global-scope="Engage.CommItem" icon="pdf" tone="stone" over="Proposal PDF" title="Generate proposal for Northern Grid" text="Recommended offers and pricing information are ready to share with customer."></x-import></div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = {"v1": [{"label": "SKU", "value": "12345-67"}, {"label": "Category", "value": "Power infrastructure"}, {"label": "Product family", "value": "Critical power"}], "v2": [{"label": "Source 1"}, {"label": "Source 2"}], "v3": [{"label": "Product catalog"}], "v4": [{"label": "View alternatives"}], "v5": 800, "v6": [{"key": "a", "label": "Specification", "width": "25%"}, {"key": "b", "label": "Value", "width": "30%"}, {"key": "c", "label": "Requirement"}], "v7": [{"a": "Critical load", "b": "80 kVA", "c": "70 kVA inverter backbone rating"}, {"a": "Backup runtime", "b": "90 minutes", "c": "Runtime package sized for 90 minutes"}, {"a": "Input voltage", "b": "480 V AC", "c": "480 V AC input"}, {"a": "Output voltage", "b": "120/208 V AC", "c": "120/208 V AC output"}, {"a": "Phase", "b": "3-phase", "c": "3-phase"}, {"a": "Installation type", "b": "Indoor electrical room", "c": "Indoor installation"}, {"a": "Application", "b": "Emergency/ critical power continuity", "c": "Central inverter backbone"}, {"a": "Service requirement", "b": "Installation + commissioning", "c": "Vertiv installation and commissioning service"}, {"a": "Support requirement", "b": "Standard post-install", "c": "Standard warranty + optional service plan"}], "v8": [{"label": "Product catalog"}], "v9": [{"label": "Recommend alternatives"}, {"label": "Refine requirement"}], "v10": 800, "v11": true, "v12": [{"label": "Add new resource"}], "v13": 800};
+    return Object.assign(v, this.handlers ? this.handlers() : {});
+  }
+}
+</script>
+</body>
+</html>

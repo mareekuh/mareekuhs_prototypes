@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Customer quote</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/engage/components/bundle.css">
+<script src="ds/engage/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}</style>
+</helmet>
+<div class="eg-app" style="width: 1920px; height: 1080px">
+<x-import component-from-global-scope="Engage.NavRail" active="opportunities" home-href="Main.dc.html"></x-import>
+<main class="eg-main">
+<div class="eg-strip"></div>
+<x-import component-from-global-scope="Engage.RecordHeader" crumb="Home" title="Quote 1001: Infrastructure product request" meta="{{ v1 }}"></x-import><div class="eg-scroll">
+<x-import component-from-global-scope="Engage.PageSummary" title="Please review the updated proposal, which includes Supremo’s Hybrid Centralized solution." text="This quote provides the strongest balance between reliability, deployment flexibility, and infrastructure adaptability across diverse site conditions and evolving operational requirements."></x-import>
+<div class="eg-content">
+<x-import component-from-global-scope="Engage.Section" overline="Included products" title="The Hybrid Centralized solution is optimized to ensure compatibility with Northern’s existing AC System" description="Provides the strongest balance between reliability, deployment flexibility, and infrastructure adaptability across diverse site conditions and evolving operational requirements. Additionally, the offering is optimized for scalability and future-proofs deployment." chips="{{ v4 }}">
+<p class="eg-totals">Total: <b>$744,400.00</b> Your budget: <b>$800,000.00</b> Number of items: <b>8 of 157</b></p>
+<x-import component-from-global-scope="Engage.DataTable" columns="{{ v2 }}" rows="{{ v3 }}"></x-import>
+</x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Pricing" title="Highest value, with lowest cost" description="The main advantage of the hybrid approach is that it provides a mixed vendor allowing Northern Grid to gain the best price for a more sustainable and scalable solution." sources="{{ v6 }}" chips="{{ v7 }}"><x-import component-from-global-scope="Engage.MetricTable" rows="{{ v5 }}"></x-import></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Billing details" title="This order is going to Supremo Seattle Business District." description="You may want to confirm the destination before placing, this is a big order (67 items)." chips="{{ v10 }}"><x-import component-from-global-scope="Engage.MetricTable" head="{{ v8 }}" rows="{{ v9 }}"></x-import></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Requirements" title="Northern Grid is seeking AC Powered infrastructure expansion" description="This solution needs to support AC-fed equipment within existing -48V DC and 380V DC infrastructure while minimizing redesign. The solution must meet deployment constraints and deliver reliable power across diverse site conditions." sources="{{ v11 }}" chips="{{ v12 }}"></x-import>
+<x-import component-from-global-scope="Engage.Section" overline="Collaborators" title="Team working on this solution" sources="{{ v16 }}" chips="{{ v17 }}"><div><x-import component-from-global-scope="Engage.PersonRow" name="Adrian Cole" role="Procurement Manager" photo="assets/b7ebfd0cc46b9996068c15d63ea8098d.png" tag="key decision maker" verified="{{ v13 }}" linkedin="{{ v14 }}"></x-import><x-import component-from-global-scope="Engage.PersonRow" name="Jennifer Bennet" role="Quoting Agent" photo="img/0553c.png" last="{{ v15 }}"></x-import></div></x-import>
+</div>
+</div>
+</main>
+<x-import component-from-global-scope="Engage.RightPanel"><x-import component-from-global-scope="Engage.PanelHeading">Priority actions</x-import><div class="eg-panel-list"><x-import component-from-global-scope="Engage.ActionCard" badge="High" tone="danger" over="Requested quote ready" title="Accept the quote to place the order" text="Secure the best price by accepting before Jun 15, 2026" cta="Accept and order" on-cta="{{ accept }}"></x-import></div><x-import component-from-global-scope="Engage.PanelHeading">Communications</x-import></x-import>
+<sc-if value="{{ ended }}" hint-placeholder-val="{{ false }}"><div class="eg-end" aria-live="polite"><div><p class="eg-end-title">Order placed</p><p class="eg-end-text">Thank you. Northern Grid’s order for the Hybrid Centralized solution has been submitted to Supremo.</p><p class="eg-end-note">End of prototype</p><a class="eg-link" href="Main.dc.html">Restart from the beginning</a></div></div></sc-if></div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  constructor(props) { super(props); this.state = { ended: false }; }
+  handlers() { return { ended: this.state.ended, accept: () => this.setState({ ended: true }) }; }
+  renderVals() {
+    const v = {"v1": [{"label": "Created", "value": "Jun 1, 2026"}, {"label": "Cost", "value": "$366,000"}], "v2": [{"key": "product", "label": "Product", "width": "30%", "link": false}, {"key": "why", "label": "Why it’s included"}, {"key": "qty", "label": "Quantity", "width": "110px", "numeric": true}], "v3": [{"product": "Vertiv central inverter backbone", "why": "Supports the customer’s high pod-level power demands", "qty": 23}, {"product": "CE+T rack-mounted support modules", "why": "Distributes power conversion closer to the rack to improve rollout flexibility and simplify deployment across evolving site conditions.", "qty": 6}, {"product": "Adaptable DC input / power interface", "why": "Helps the customer maintain operational continuity and simplify maintenance.", "qty": 1}, {"product": "Coordinated AC distribution / bypass assembly", "why": "Reduces needs for major infrastructure redesign across sites", "qty": 10}, {"product": "Modular UPS systems", "why": "Enhances energy efficiency by minimizing power loss during distribution.", "qty": 15}, {"product": "High-efficiency cooling solutions", "why": "Facilitates scalable solutions that can grow with the customer’s needs.", "qty": 8}, {"product": "Integrated battery management system", "why": "Provides real-time monitoring to optimize power usage and performance.", "qty": 5}, {"product": "Remote monitoring and management tools", "why": "Enables rapid troubleshooting and reduces downtime through advanced diagnostics.", "qty": 5}], "v4": [{"label": "View included products"}], "v5": [{"label": "List value", "value": "$744,400"}, {"label": "One-time fees", "value": "$20,000"}, {"label": "Monthly fees", "value": "$2,000 / month"}, {"label": "Discount", "value": "8%"}, {"label": "Total", "value": "$704,848", "strong": true}], "v6": [{"label": "Sales engagement"}, {"label": "Traceability"}], "v7": [{"label": "View details"}], "v8": ["Detail", "Value"], "v9": [{"label": "Billing address", "value": "103 Main, Seattle, WA (Default)"}, {"label": "Payment term", "value": "NET 60"}], "v10": [{"label": "Change billing address"}, {"label": "Change payment term"}], "v11": [{"label": "Sales engagement app"}, {"label": "Traceability"}], "v12": [{"label": "View requirements"}], "v13": true, "v14": true, "v15": true, "v16": [{"label": "Sales engagement app"}], "v17": [{"label": "View details"}]};
+    return Object.assign(v, this.handlers ? this.handlers() : {});
+  }
+}
+</script>
+</body>
+</html>

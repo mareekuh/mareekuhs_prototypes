@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Product list</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="ds/engage/components/bundle.css">
+<script src="ds/engage/components/bundle.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>body{margin:0}</style>
+</helmet>
+<div class="eg-app" style="width: 1920px; height: 1080px">
+<x-import component-from-global-scope="Engage.NavRail" active="opportunities" home-href="Main.dc.html"></x-import>
+<main class="eg-main">
+<div class="eg-strip"></div>
+<x-import component-from-global-scope="Engage.RecordHeader" crumb="Infrastructure Services - OPTY-00005" crumb-href="QuoteDetail.dc.html" title="Included products" subtitle="Need to update quantities or remove product? Use Ask Oracle to make those changes."></x-import><div class="eg-scroll">
+<div class="eg-content">
+<x-import component-from-global-scope="Engage.Section" overline="Product breakdown list" title="Products centralizes efficiency with localized flexibility" action="collapse" action-href="QuoteDetail.dc.html" action-label="Back to quote detail" chips="{{ v3 }}" loading-ms="{{ v4 }}"><p class="eg-totals">Showing <b>21 of 157</b> products</p><x-import component-from-global-scope="Engage.DataTable" columns="{{ v1 }}" rows="{{ v2 }}"></x-import></x-import>
+</div>
+</div>
+</main>
+<x-import component-from-global-scope="Engage.RightPanel">
+<x-import component-from-global-scope="Engage.PanelHeading">Priority actions (0)</x-import>
+
+<x-import component-from-global-scope="Engage.PanelHeading">Communications</x-import>
+<div class="eg-stack" style="padding: 0 24px 24px"><x-import component-from-global-scope="Engage.CommItem" icon="pdf" tone="stone" over="Proposal PDF" title="Generate proposal for Northern Grid" text="Recommended offers and pricing information are ready to share with customer."></x-import></div>
+</x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1920,"height":1080}}'>
+class Component extends DCLogic {
+  renderVals() {
+    const v = {"v1": [{"key": "product", "label": "Product", "width": "26%", "link": true}, {"key": "why", "label": "Why it’s included"}, {"key": "qty", "label": "Quantity", "width": "100px", "numeric": true}, {"key": "price", "label": "List price", "width": "120px", "numeric": true}, {"key": "total", "label": "Total", "width": "120px", "numeric": true}], "v2": [{"product": "Vertiv central inverter backbone", "why": "Supports the customer’s high pod-level power demands", "qty": 23, "price": "$1,500", "total": "$34,500", "href": "ProductDetail.dc.html"}, {"product": "CE+T rack-mounted support modules", "why": "Distributes power conversion closer to the rack to improve rollout flexibility and simplify deployment across evolving site conditions.", "qty": 6, "price": "$800", "total": "$4,800"}, {"product": "Adaptable DC input / power interface", "why": "Helps the customer maintain operational continuity and simplify maintenance.", "qty": 1, "price": "$900", "total": "$900"}, {"product": "Coordinated AC distribution / bypass assembly", "why": "Reduces needs for major infrastructure redesign across sites", "qty": 10, "price": "$1,000", "total": "$10,000"}, {"product": "Modular UPS systems", "why": "Enhances energy efficiency by minimizing power loss during distribution.", "qty": 15, "price": "$1,100", "total": "$16,500"}, {"product": "High-efficiency cooling solutions", "why": "Facilitates scalable solutions that can grow with the customer’s needs.", "qty": 6, "price": "$1,200", "total": "$7,200"}, {"product": "Integrated battery management system", "why": "Provides real-time monitoring to optimize power usage and performance.", "qty": 4, "price": "$1,300", "total": "$5,200"}, {"product": "Remote monitoring and management tools", "why": "Enables rapid troubleshooting and reduces downtime through advanced diagnostics.", "qty": 5, "price": "$1,400", "total": "$7,000"}, {"product": "Sustainable energy storage solutions", "why": "Stores surplus energy to keep critical loads running through peaks and outages.", "qty": 12, "price": "$1,600", "total": "$19,200"}, {"product": "Advanced power distribution units", "why": "Routes power to each rack with per-outlet monitoring and control.", "qty": 9, "price": "$1,750", "total": "$15,750"}, {"product": "Scalable liquid cooling systems", "why": "Cools high-density racks as pod loads grow.", "qty": 7, "price": "$1,400", "total": "$9,800"}, {"product": "Redundant networking infrastructure", "why": "Keeps monitoring and control traffic available if a path fails.", "qty": 3, "price": "$2,000", "total": "$6,000"}, {"product": "Customizable data center layouts", "why": "Fits equipment to each site’s rack space and airflow constraints.", "qty": 2, "price": "$2,500", "total": "$5,000"}, {"product": "AI-driven energy management systems", "why": "Balances load and cooling automatically to lower energy use.", "qty": 11, "price": "$1,900", "total": "$20,900"}, {"product": "Smart grid technology integration", "why": "Connects site power with the utility grid for demand response.", "qty": 14, "price": "$1,600", "total": "$22,400"}, {"product": "Next-gen power supply solutions", "why": "Supplies efficient power to new AC-fed equipment.", "qty": 5, "price": "$1,000", "total": "$5,000"}, {"product": "Portable backup power units", "why": "Covers temporary loads during installation and maintenance.", "qty": 8, "price": "$1,250", "total": "$10,000"}, {"product": "Multi-functional power converters", "why": "Converts between AC and the existing -48V DC and 380V DC environments.", "qty": 6, "price": "$950", "total": "$5,700"}, {"product": "Hybrid energy systems", "why": "Combines grid, battery and on-site sources for resilience.", "qty": 3, "price": "$1,700", "total": "$5,100"}, {"product": "Renewable energy integration systems", "why": "Adds renewable sources without redesigning the power backbone.", "qty": 4, "price": "$1,800", "total": "$7,200"}, {"product": "Energy-efficient HVAC systems", "why": "Keeps electrical rooms within environmental requirements at lower cost.", "qty": 10, "price": "$1,350", "total": "$13,500"}], "v3": [{"label": "Recommend alternatives"}, {"label": "Show all"}], "v4": 1300};
+    return Object.assign(v, this.handlers ? this.handlers() : {});
+  }
+}
+</script>
+</body>
+</html>
